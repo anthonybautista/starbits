@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>StarBits</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+            type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <script src="code.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <a href="https://starbits.xyz" target="_blank" rel="noreferrer">
+            <img id="logo-long" src="starbits_logo.png" alt="StarBits logo" />
+        </a>
+        <p class="notice">Notice: Very open to new logo as long as it doesn't cost 380 AVAX.</p>
+        <h2>StarBits - An Experimental ERC20</h2>
+        <a href="https://starbits.xyz" target="_blank" rel="noreferrer">
+            Contract Address
+        </a>
+        <br/>
+        <a href="https://starbits.xyz" target="_blank" rel="noreferrer">
+            Initial Liquidity Burned
+        </a>
+        <h3>Concept</h3>
+        <p>
+            StarBits implements a 10% transfer tax on most transactions (buying from the LP does not!). This tax is used
+            to swap for BTC.b, and every time at least 0.1 BTC.b is accumulated, one lucky address will be sent that BTC.b!
+        </p>
+        <p>
+            That's right! If this token can sustain liquidity and usage (which is no guarantee, of course), participants
+            have a chance at being airdropped BTC.b!
+        </p>
+        <h3>Tokenomics</h3>
+        <p>
+            This token has a capped supply of 21,420,000 - allocated as follows:
+        </p>
+        <ol>
+            <li>320,000 Creator Allocation</li>
+            <li>4,200,000 Initial Liquidity</li>
+            <li>
+                16,900,000 Price Containment Liquidity (PCL)<br/>
+                <i class="notice">NOTE: PCL is stored in the token contract and programmatically added to the liquidity pool to prevent early
+                    exponential token price increases and make providing liquidity easier for early entrants.</i>
+            </li>
+        </ol>
+        <h3>How to Participate</h3>
+        <p>
+            There are two ways to be eligible for the next BTC.b drop:
+        </p>
+        <ol>
+            <li>Selling or transferring the token, which incurs a tax, will earn you 1 Star Power. This can be done once per 24 hours.</li>
+            <li>
+                Staking LP tokens. If you provide liquidity, you can stake those LP tokens to accrue 1 Star Power per 1 AVAX in LP per 24 hours.<br/>
+                <i class="notice">NOTE: Star Power from staking fluctuates as the value of the LP fluctuates, and must be claimed every day.</i>
+            </li>
+        </ol>
+        <p><b>1 Star Power is 1 entry in the drawing. When it is time to pick a winner, Chainlink VRF will select one
+            entry and send that address the BTC.b. More Star Power = more chances to win!</b></p>
+        <div id="liq">
+            <p class="warn">Please note that while providing liquidity gives more chances to win per day, it comes with significant risks.</p>
+            <a href="https://academy.binance.com/en/articles/what-are-liquidity-pools-in-defi" class="warn" target="_blank" rel="noreferrer">
+                Learn More Here
+            </a>
+            <br/>
+            <br/>
+        </div>
+        <br/>
+        <p>Current Accumulated BTC.b:</p>
+        <div id="accumulatedBTC"></div>
+        <p>Current Total Star Power:</p>
+        <div id="accumulatedBTC"></div>
+        <div id="mint">
+            <button id="connect" class='cta-button connect-wallet-button'>
+                Connect Wallet
+            </button>
+            <h3>Stake LP Tokens</h3>
+            <p>Your LP Tokens: <span id="yourLP"></span></p>
+            <p>Your approved LP Tokens: <span id="approvedLP"></span></p>
+            <p id="mintError"></p>
+            <button id="aproveButton" class='cta-button connect-wallet-button'>
+                Approve
+            </button>
+            <button id="stakeButton" class='cta-button connect-wallet-button'>
+                Stake
+            </button>
+            <button id="unstakeButton" class='cta-button connect-wallet-button'>
+                UnStake
+            </button>
+            <br/>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p class="notice">DISCLAIMER: This experimental token should be considered as highly speculative and not a sound
+        investment. All users should verify the legality of digital tokens per their local government entities and act
+        accordingly. DO NOT purchase any digital asset with money you are not willing to lose.</p>
+    </div>
+</body>
+</html>
