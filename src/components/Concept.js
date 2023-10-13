@@ -1,4 +1,5 @@
-export default function Concept() {
+export default function Concept(props) {
+  const {btc} = props;
   const conceptItems = [
     "StarBits implements a 10% transfer tax on most transactions(buying from the LP does not!). This tax is used to swap for BTC.b, and every time at least 0.1 BTC.b is accumulated, one lucky address will be sent that BTC.b!",
     "That's right! If this token can sustain liquidity and usage (which is no guarantee, of course), participants have a chance at being airdropped BTC.b!",
@@ -19,6 +20,14 @@ export default function Concept() {
             </div>
           );
         })}
+      </div>
+      <div className="flex flex-col justify-center items-center px-4 py-2 col-span-3"
+      >
+        <div
+          className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow mx-auto">
+          <p className="text-xl font-bold">Current BTC.b Accumulated</p>
+          <p>{btc}</p>
+        </div>
       </div>
     </div>
   );
