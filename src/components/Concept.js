@@ -1,8 +1,8 @@
 export default function Concept(props) {
   const {btc} = props;
   const conceptItems = [
-    "StarBits implements a 10% transfer tax on most transactions(buying from the LP does not!). This tax is used to swap for BTC.b, and every time at least 0.1 BTC.b is accumulated, one lucky address will be sent that BTC.b!",
-    "That's right! If this token can sustain liquidity and usage (which is no guarantee, of course), participants have a chance at being airdropped BTC.b!",
+    "StarBits implements a 10% transfer tax on most transactions(buying from the LP does not!). This tax is used to swap for BTC.b, and every time at least 0.1 BTC.b is accumulated, one lucky participant will be sent that BTC.b!",
+    "This means that if StarBits can sustain liquidity and usage (which is no guarantee, of course), participants have a chance at being airdropped BTC.b on a regular basis!",
   ];
   return (
     <div class="h-full py-4 text-black flex flex-col items-center">

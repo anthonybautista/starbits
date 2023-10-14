@@ -13,6 +13,8 @@ import ARENA from '../junk/arena.json';
 import ERC20 from '../junk/erc20.json';
 import STARBITS from '../junk/bits.json';
 import lodash from "lodash";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const cArena = "0xA481B139a1A654cA19d2074F174f17D7534e8CeC";
 const cBTC = "0x152b9d0FdC40C096757F570A51E494bd4b943E50";
@@ -85,6 +87,8 @@ export default function Home() {
   const [holderTimestamp, setHolderTimestamp] = useState(0);
   const [stakerTimestamp, setStakerTimestamp] = useState(0);
 
+  let ethersProvider, signer;
+
   useEffect(() => {
     async function fetchData() {
       await btcContract.balanceOf(cSwapper).then(x => {
@@ -94,7 +98,6 @@ export default function Home() {
         setStars(s);
       })
       if (wallet) {
-        console.log(wallet.accounts[0].address)
         await arenaContract.sharesBalance("0x659071a5eB37eaF2B87bA5Ac3a60cC63948C03Db", wallet.accounts[0].address).then(h => {
           setHolder(h);
         })
@@ -102,16 +105,13 @@ export default function Home() {
           setHolderTimestamp(Number(ht));
         })
         await lpContractA.balanceOf(wallet.accounts[0].address).then(j => {
-          console.log(j)
           setLpBalance(Number(j));
         })
         await lpContractA.allowance(wallet.accounts[0].address, cStarbits).then(a => {
-          console.log(a)
           setLpApproved(Number(a));
         })
         await starbitsContractA.starToStake(wallet.accounts[0].address).then(st => {
-          //setLpStaked(Number[st[0]]);
-          setLpStaked(500000000000000000000)
+          setLpStaked(Number(st[0]));
           setStakerTimestamp(Number(st[1]));
         })
       }
@@ -120,22 +120,133 @@ export default function Home() {
   }, [wallet]);
 
   const claimHolder = async () => {
+    ethersProvider = await new ethers.BrowserProvider(wallet.provider, 'any');
+    signer = await ethersProvider.getSigner();
+    const contract = new ethers.Contract(cStarbits, STARBITS, signer);
 
+    try {
+      const tx = await contract.holderClaimStarPower();
+      toast('Claiming Holder Star Power');
+      const receipt = await tx.wait()
+      if (receipt.status) {
+        toast.success('Successfully Claimed!');
+        await starbitsContractA.starToLastHolderClaim(wallet.accounts[0].address).then(ht => {
+          setHolderTimestamp(Number(ht));
+        })
+      } else {
+        toast.warning('Claim Failed!');
+      }
+    } catch (e) {
+      console.log(e)
+      toast.error(e["reason"]);
+    }
   }
 
   const claimStaker = async () => {
+    ethersProvider = await new ethers.BrowserProvider(wallet.provider, 'any');
+    signer = await ethersProvider.getSigner();
+    const contract = new ethers.Contract(cStarbits, STARBITS, signer);
 
+    try {
+      const tx = await contract.claimStarPower();
+      toast('Claiming Staker Star Power');
+      const receipt = await tx.wait()
+      if (receipt.status) {
+        toast.success('Claim Successful!');
+        await starbitsContractA.starToStake(wallet.accounts[0].address).then(st => {
+          setLpStaked(Number[st[0]]);
+          setStakerTimestamp(Number(st[1]));
+        })
+      } else {
+        toast.warning('Claim Failed!');
+      }
+    } catch (e) {
+      toast.error(e["reason"]);
+    }
   }
 
-  const approveLP = async (address) => {
+  const approveLP = async (amount) => {
+    ethersProvider = await new ethers.BrowserProvider(wallet.provider, 'any');
+    signer = await ethersProvider.getSigner();
+    const contract = new ethers.Contract(cLP, ERC20, signer);
+
+    try {
+      const tx = await contract["approve"](cStarbits,ethers.parseEther((amount.toString())));
+      toast('Approving LP Tokens')
+      const receipt = await tx.wait()
+      if (receipt.status) {
+        toast.success('Approval Successful!')
+        await lpContractA.allowance(wallet.accounts[0].address, cStarbits).then(a => {
+          setLpApproved(Number(a));
+        })
+      } else {
+        toast.warning('Approval Failed!')
+      }
+    } catch (e) {
+      console.log(e)
+      toast.error(e["reason"]);
+    }
   }
 
-  const stakeLP = async (address) => {
+  const stakeLPT = async (amount) => {
+    ethersProvider = await new ethers.BrowserProvider(wallet.provider, 'any');
+    signer = await ethersProvider.getSigner();
+    const contract = new ethers.Contract(cStarbits, STARBITS, signer);
 
+    try {
+      const tx = await contract.stakeLP(ethers.parseEther((amount.toString())));
+      toast('Staking LP Tokens')
+      const receipt = await tx.wait()
+      if (receipt.status) {
+        toast.success('Successfully Staked!')
+        await lpContractA.balanceOf(wallet.accounts[0].address).then(j => {
+          setLpBalance(Number(j));
+        })
+        await lpContractA.allowance(wallet.accounts[0].address, cStarbits).then(a => {
+          setLpApproved(Number(a));
+        })
+        await starbitsContractA.starToStake(wallet.accounts[0].address).then(st => {
+          setLpStaked(Number[st[0]]);
+          setStakerTimestamp(Number(st[1]));
+        })
+      } else {
+        toast.warning('Staking Failed!')
+      }
+    } catch (e) {
+      console.log(e)
+      toast.error(e["reason"]);
+    }
   }
 
-  const unStakeLP = async (address) => {
+  const unStakeLP = async (amount) => {
+    ethersProvider = await new ethers.BrowserProvider(wallet.provider, 'any');
+    signer = await ethersProvider.getSigner();
+    const contract = new ethers.Contract(cStarbits, STARBITS, signer);
 
+    try {
+      const tx = await contract.unstakeLP(ethers.parseEther((amount.toString())));
+      toast('Unstaking LP Tokens')
+      const receipt = await tx.wait()
+      if (receipt.status) {
+        console.log(receipt.status)
+        toast.success('Successfully Unstaked!');
+        await lpContractA.balanceOf(wallet.accounts[0].address).then(j => {
+          setLpBalance(Number(j));
+        })
+        await lpContractA.allowance(wallet.accounts[0].address, cStarbits).then(a => {
+          setLpApproved(Number(a));
+        })
+        await starbitsContractA.starToStake(wallet.accounts[0].address).then(st => {
+          setLpStaked(Number[st[0]]);
+          setStakerTimestamp(Number(st[1]));
+        })
+      } else {
+        toast.warning('Unstaking Failed!');
+      }
+    } catch (e) {
+      console.log(e)
+      toast.error(e["reason"]);
+    }
   }
 
   const getStars = async () => {
@@ -145,17 +256,13 @@ export default function Home() {
   }
 
   const getStarPower = async (address) => {
-    let counts = lodash.countBy(stars);
-    setStarPower(counts[address] ? counts[address] : 0);
+    await getStars().then(() => {
+      let counts = lodash.countBy(stars);
+      setStarPower(counts[address] ? counts[address] : 0);
+    })
   }
 
-  // create an ethers provider
-  let ethersProvider, signer;
 
-  if (wallet) {
-    ethersProvider = new ethers.BrowserProvider(wallet.provider, 'any');
-    signer = ethersProvider.getSigner();
-  }
 
   return (
     <>
@@ -172,7 +279,7 @@ export default function Home() {
         </div>
         <Concept btc={btcBalance / 10**8} />
         <Tokenomics />
-        <Participate />
+        <Participate token={cStarbits}/>
         <Interact
           wallet={wallet}
           connecting={connecting}
@@ -190,10 +297,23 @@ export default function Home() {
           claimHolder={claimHolder}
           claimStaker={claimStaker}
           approveLP={approveLP}
-          stakeLP={stakeLP}
+          stakeLP={stakeLPT}
           unStakeLP={unStakeLP}
         />
         <Footer />
+        <div class="buffer"/>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
     </>
   );

@@ -23,8 +23,8 @@ export default function Tokenomics() {
         <div class="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow text-fuchsia-800 font-bold col-span-1 md:col-span-3">
           <p>
             NOTE: PCL is stored in the token contract and programmatically added
-            to the liquidity pool to prevent early exponential token price
-            increases and make providing liquidity easier for early entrants.
+            to the liquidity pool using Chainlink Automation. This temporarily suppresses rapid price
+            increases in an attempt to make providing liquidity easier for early entrants.
           </p>
         </div>
       </div>

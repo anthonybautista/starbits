@@ -3,6 +3,7 @@ import {useState} from "react";
 import Unstake from "./Unstake";
 import arena from '../arena_logo.png';
 import React from "react";
+import Timer from "./Timer";
 
 export default function Interact(props) {
   const { wallet, connecting, connect, disconnect, getStarPower, starPower, holder,
@@ -20,6 +21,7 @@ export default function Interact(props) {
   }
 
   // Solution from https://labeebklatif.medium.com/js-number-tofixed-without-rounding-4da4207ba146
+  // eslint-disable-next-line
   Number.prototype.toFixedNoRound = function (precision = 1) {
     const factor = Math.pow(10, precision);
     return Math.floor(this * factor) / factor;
@@ -57,13 +59,14 @@ export default function Interact(props) {
           <p className="text-xl font-bold">xrpant Holder Claim</p>
           <hr className="h-px my-4 bg-black w-4/5 border-1 dark:bg-black border-black"/>
           {holder ? 'You are a holder' : 'You are not a holder'}
+          <Timer timestamp={holderTimestamp} />
           <Button
             id="holderButton"
             variant="contained"
             color="secondary"
-            disabled={!holder}
+            disabled={!holder || !wallet}
             sx={{minWidth: 100, height: 30, backgroundColor: "black", color: "#F7931E", mt: 1}}
-            onClick={() => (wallet ? disconnect(wallet) : connect())}
+            onClick={() => claimHolder()}
           >
             Claim
           </Button>
@@ -87,9 +90,9 @@ export default function Interact(props) {
                 id="stakeButton"
                 variant="contained"
                 color="secondary"
+                disabled={lpBalance === 0 || !wallet}
                 sx={{minWidth: 100, height: 30, backgroundColor: "black", color: "#F7931E", mt: 1, mb: 1}}
-                onClick={() => {
-                }}
+                onClick={() => stakeLP(lpAmount)}
               >
                 Stake
               </Button>
@@ -98,21 +101,20 @@ export default function Interact(props) {
                 id="approveButton"
                 variant="contained"
                 color="secondary"
+                disabled={lpBalance === 0 || !wallet}
                 sx={{minWidth: 100, height: 30, backgroundColor: "black", color: "#F7931E", mt: 1, mb: 1}}
-                onClick={() => {
-                }}
+                onClick={() => approveLP(lpAmount)}
               >
                 Approve
               </Button>
           }
           <hr className="h-px my-4 bg-black w-4/5 border-1 dark:bg-black border-black"/>
           <Unstake
-            handleLpChange={handleLPChange}
-            lpBalance={lpBalance}
-            lpApproved={lpApproved}
             lpStaked={lpStaked}
             stakerTimestamp={stakerTimestamp}
             unStakeLP={unStakeLP}
+            claimStaker={claimStaker}
+            wallet={wallet}
           />
 
         </div>

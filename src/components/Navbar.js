@@ -4,13 +4,17 @@ export default function Navbar() {
   const navLinks = [
     {
       name: "Contract",
-      path: "/address",
+      path: `https://snowtrace.io/address/0xf553838e7ac36d2311fec4a32254bd67bed1b1bf#code`,
     },
-    {
-      name: "Initial Burned",
-      path: "/burned",
-    },
+    // {
+    //   name: "Initial Burned",
+    //   path: "/burned",
+    // },
   ];
+  function toggleNav() {
+    let x = document.getElementById("navbar-default");
+    x.classList.toggle("hidden");
+  }
   return (
     <nav class="bg-black">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -24,9 +28,10 @@ export default function Navbar() {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
+          onClick={toggleNav}
         >
           <span class="sr-only">Open main menu</span>
           <svg
@@ -54,6 +59,8 @@ export default function Navbar() {
                     to={item.path}
                     class="block py-2 pl-3 pr-4 text-primary"
                     aria-current="page"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {item.name}
                   </Link>
