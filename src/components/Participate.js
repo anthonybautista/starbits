@@ -27,7 +27,7 @@ export default function Participate(props) {
           className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow"
         >
           <p>If you provide liquidity for StarBits, you can stake those LP tokens to accrue 1 Star Power per 1 AVAX in LP per 24 hours.</p>
-          <p><a href={`https://dex.vavalon.com/pool/add/${token}/undefined?chainId=43114`} target="blank"
+          <p><a href={`https://dex.vavalon.com/pool/add/${token}/ETH?chainId=43114`} target="blank"
              rel="noreferrer noopener" class="underline text-fuchsia-800">Add Liquidity</a>*</p>
           <p>*<a href="#disclaimers" class="underline text-fuchsia-800">Please Read Disclaimers</a></p>
         </div>

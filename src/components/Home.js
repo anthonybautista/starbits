@@ -18,9 +18,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const cArena = "0xA481B139a1A654cA19d2074F174f17D7534e8CeC";
 const cBTC = "0x152b9d0FdC40C096757F570A51E494bd4b943E50";
-const cLP = "0xC467215fa95370c672D7F475a430579CFe66752B";
-const cStarbits = "0xF553838E7ac36d2311fEC4a32254bD67BEd1B1BF";
-const cSwapper = "0xb9F118Cd29b56aDf79628F41687B2Cf510C1E4dc";
+const cLP = "0x6E32F0AF53a474B504d02D3579460AD01aeC3206";
+const cStarbits = "0x7C06034cB6d1F40A983a7d70cef65a7069f9Bffa";
+const cSwapper = "0x142327677AbF6844b02289021f4343685De03821";
 
 const injected = injectedModule()
 

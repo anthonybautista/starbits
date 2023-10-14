@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="Begin web3 connection 2">
+    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="Connect contract functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Concept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concept.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Interact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Interact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Participate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Participate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tokenomics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tokenomics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Unstake.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Unstake.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696624865398</updated>
       <workItem from="1696624867360" duration="4400000" />
-      <workItem from="1696897215464" duration="36155000" />
+      <workItem from="1696897215464" duration="36965000" />
     </task>
     <task id="LOCAL-00001" summary="change to react">
       <created>1696628305700</created>
@@ -81,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697170764225</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Connect contract functions">
+      <created>1697310602079</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697310602079</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +102,7 @@
     <MESSAGE value="change to react" />
     <MESSAGE value="Begin web3 connection" />
     <MESSAGE value="Begin web3 connection 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Begin web3 connection 2" />
+    <MESSAGE value="Connect contract functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect contract functions" />
   </component>
 </project>
