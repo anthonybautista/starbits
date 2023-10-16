@@ -10,7 +10,7 @@ export default function Participate(props) {
           className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow"
         >
           <p>Holders of <a href="https://x.com/xrpant" target="blank" rel="noreferrer noopener" class="underline text-fuchsia-800">xrpant</a>
-            &nbsp;tickets on <a href="https://starsarena.com" target="blank" rel="noreferrer noopener" class="underline text-fuchsia-800">StarsArena</a>
+            &nbsp;tickets on <a href="https://starsarena.com/xrpant" target="blank" rel="noreferrer noopener" class="underline text-fuchsia-800">StarsArena</a>
             &nbsp;can claim 1 Star Power every 24 hours without needed to hold any StarBits!</p>
         </div>
         <div

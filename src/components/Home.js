@@ -277,7 +277,7 @@ export default function Home() {
             An Experimental ERC20
           </p>
         </div>
-        <Concept btc={btcBalance / 10**8} />
+        <Concept btc={btcBalance / 10**8} swapper={cSwapper}/>
         <Tokenomics />
         <Participate token={cStarbits}/>
         <Interact

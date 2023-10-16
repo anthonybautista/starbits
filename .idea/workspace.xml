@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="Connect contract functions">
+    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="Connect Vavalon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Concept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concept.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Participate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Participate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1696624865398</updated>
       <workItem from="1696624867360" duration="4400000" />
-      <workItem from="1696897215464" duration="36965000" />
+      <workItem from="1696897215464" duration="38199000" />
+      <workItem from="1697419567159" duration="1329000" />
     </task>
     <task id="LOCAL-00001" summary="change to react">
       <created>1696628305700</created>
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697310602079</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Connect Vavalon">
+      <created>1697315411380</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697315411380</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +112,7 @@
     <MESSAGE value="Begin web3 connection" />
     <MESSAGE value="Begin web3 connection 2" />
     <MESSAGE value="Connect contract functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect contract functions" />
+    <MESSAGE value="Connect Vavalon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect Vavalon" />
   </component>
 </project>

@@ -13,8 +13,16 @@ export default function Footer() {
           </p>
         </div>
         <div
+          className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow text-fuchsia-800 font-bold col-span-1 sm:col-span-2">
+          <p>
+            It is important to note that if liquidity and trading volume does not reach the required amount, 0.1 BTC.b
+            may never be accumulated, which would mean no winners. This contract has not been audited and there are no
+            recovery functions built in. Trade at your own risk.
+          </p>
+        </div>
+        <div
             className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow text-fuchsia-800 font-bold col-span-1 sm:col-span-2">
-          <p>Please note that while providing liquidity gives more chances to win per day, it comes
+          <p>Please note that while providing liquidity gives more Star Power per day, it comes
             with significant risks.</p>
           <a href="https://academy.binance.com/en/articles/what-are-liquidity-pools-in-defi" className="underline"
              target="_blank" rel="noreferrer"> Learn More Here </a>

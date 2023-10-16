@@ -1,5 +1,5 @@
 export default function Concept(props) {
-  const {btc} = props;
+  const {btc, swapper} = props;
   const conceptItems = [
     "StarBits implements a 10% transfer tax on most transactions(buying from the LP does not!). This tax is used to swap for BTC.b, and every time at least 0.1 BTC.b is accumulated, one lucky participant will be sent that BTC.b!",
     "This means that if StarBits can sustain liquidity and usage (which is no guarantee, of course), participants have a chance at being airdropped BTC.b on a regular basis!",
@@ -17,6 +17,12 @@ export default function Concept(props) {
               class="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow"
             >
               <p>{item}</p>
+              {
+                index === 1 ?
+                  <p><a href="#disclaimers" className="underline text-fuchsia-800">Please Read Disclaimers</a></p>
+                :
+                  ""
+              }
             </div>
           );
         })}
@@ -26,7 +32,10 @@ export default function Concept(props) {
         <div
           className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow mx-auto">
           <p className="text-xl font-bold">Current BTC.b Accumulated</p>
-          <p>{btc}</p>
+          <p><a
+            href={`https://snowtrace.io/address/${swapper}#code`}
+            target="blank"
+            rel="noreferrer noopener" className="underline text-fuchsia-800">{btc}</a></p>
         </div>
       </div>
     </div>
