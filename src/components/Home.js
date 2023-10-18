@@ -98,7 +98,7 @@ export default function Home() {
         setStars(s);
       })
       if (wallet) {
-        await arenaContract.sharesBalance("0x659071a5eB37eaF2B87bA5Ac3a60cC63948C03Db", wallet.accounts[0].address).then(h => {
+        await arenaContract.sharesBalance("0x8e885ff6232be7e5a82906b99BBd628aF7d4a598", wallet.accounts[0].address).then(h => {
           setHolder(h);
         })
         await starbitsContractA.starToLastHolderClaim(wallet.accounts[0].address).then(ht => {
