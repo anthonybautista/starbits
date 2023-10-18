@@ -21,6 +21,13 @@ export default function Footer() {
           </p>
         </div>
         <div
+          className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow text-fuchsia-800 font-bold col-span-1 sm:col-span-2">
+          <p>
+            It is important to note that this token utilizes Chainlink on-chain price feeds to swap from WAVAX to BTC.b.
+            During time of high volatility, token transfers may fail if the liquidity pools and price feeds are not in sync.
+          </p>
+        </div>
+        <div
             className="bg-tertiary border-2 border-solid border-black flex flex-col justify-center items-center rounded-xl px-4 py-2 box-shadow text-fuchsia-800 font-bold col-span-1 sm:col-span-2">
           <p>Please note that while providing liquidity gives more Star Power per day, it comes
             with significant risks.</p>

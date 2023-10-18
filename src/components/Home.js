@@ -16,11 +16,11 @@ import lodash from "lodash";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const cArena = "0xA481B139a1A654cA19d2074F174f17D7534e8CeC";
+const cArena = "0x563395A2a04a7aE0421d34d62ae67623cAF67D03";
 const cBTC = "0x152b9d0FdC40C096757F570A51E494bd4b943E50";
-const cLP = "0x6E32F0AF53a474B504d02D3579460AD01aeC3206";
-const cStarbits = "0x7C06034cB6d1F40A983a7d70cef65a7069f9Bffa";
-const cSwapper = "0x142327677AbF6844b02289021f4343685De03821";
+const cLP = "0x25Da99174E44592c37ddbE0e6Ee4B48a40fec2E5";
+const cStarbits = "0xB618b0545455C90258F5Ff551a2FfBA8FcFB3cbB";
+const cSwapper = "0x9036525E14ce8aadDE627Bd7b07ed85Ec2681dC2";
 
 const injected = injectedModule()
 
