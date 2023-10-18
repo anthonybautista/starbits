@@ -4,7 +4,7 @@ export default function Navbar() {
   const navLinks = [
     {
       name: "Contract",
-      path: `https://snowtrace.io/address/0xB618b0545455C90258F5Ff551a2FfBA8FcFB3cbB#code`,
+      path: `https://snowtrace.io/address/0x5812146DD60f97eb4C5aCEc94703acDDdD49e88C#code`,
     },
     // {
     //   name: "Initial Burned",
