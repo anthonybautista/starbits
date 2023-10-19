@@ -6,10 +6,14 @@ export default function Navbar() {
       name: "Contract",
       path: `https://snowtrace.io/address/0x5812146DD60f97eb4C5aCEc94703acDDdD49e88C#code`,
     },
-    // {
-    //   name: "Initial Burned",
-    //   path: "/burned",
-    // },
+    {
+      name: "Liquidity Burned",
+      path: "https://snowtrace.io/tx/0xace05a3869335c3525252c76343f1126aef91e40a0091c2c2ea6abc198cb7a70",
+    },
+    {
+      name: "Owner Renounced",
+      path: "https://snowtrace.io/tx/0xfb21709110f312be24ae32ac8fc70020a5e3b6b907fd24927301bc4979224244",
+    },
   ];
   function toggleNav() {
     let x = document.getElementById("navbar-default");
