@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="fix xrpant address">
+    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="redeploy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Concept.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Concept.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
       <workItem from="1696624867360" duration="4400000" />
       <workItem from="1696897215464" duration="38199000" />
       <workItem from="1697419567159" duration="1385000" />
-      <workItem from="1697593960775" duration="2389000" />
+      <workItem from="1697593960775" duration="4252000" />
     </task>
     <task id="LOCAL-00001" summary="change to react">
       <created>1696628305700</created>
@@ -117,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697595442359</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="redeploy">
+      <created>1697669892068</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697669892068</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +150,7 @@
     <MESSAGE value="mainnet" />
     <MESSAGE value="fix navbar" />
     <MESSAGE value="fix xrpant address" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix xrpant address" />
+    <MESSAGE value="redeploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="redeploy" />
   </component>
 </project>
