@@ -175,7 +175,7 @@ export default function Home() {
       toast('Approving LP Tokens')
       const receipt = await tx.wait()
       if (receipt.status) {
-        toast.success('Approval Successful!')
+        setTimeout(toast.success('Approval Successful!'), 1000);
         await lpContractA.allowance(wallet.accounts[0].address, cStarbits).then(a => {
           setLpApproved(Number(a));
         })
@@ -198,7 +198,7 @@ export default function Home() {
       toast('Staking LP Tokens')
       const receipt = await tx.wait()
       if (receipt.status) {
-        toast.success('Successfully Staked!')
+        setTimeout(toast.success('Successfully Staked!'), 1000);
         await lpContractA.balanceOf(wallet.accounts[0].address).then(j => {
           setLpBalance(Number(j));
         })
@@ -228,8 +228,7 @@ export default function Home() {
       toast('Unstaking LP Tokens')
       const receipt = await tx.wait()
       if (receipt.status) {
-        console.log(receipt.status)
-        toast.success('Successfully Unstaked!');
+        setTimeout(toast.success('Successfully Unstaked!'), 1000)
         await lpContractA.balanceOf(wallet.accounts[0].address).then(j => {
           setLpBalance(Number(j));
         })
