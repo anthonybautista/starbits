@@ -18,7 +18,7 @@ export default function Participate(props) {
         >
           <p>Selling or transferring StarBits, which incurs a tax, will earn you 1 Star Power. This can be done once per 24 hours.</p>
           <p><a
-            href={`https://dex.vavalon.com/swap?chainId=43114&inputCurrency=0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7&outputCurrency=${token}`}
+            href={`https://dex.vavalon.com/swap?chainId=43114&inputCurrency=ETH&outputCurrency=${token}`}
             target="blank"
             rel="noreferrer noopener" className="underline text-fuchsia-800">Buy Starbits</a>*</p>
           <p>*<a href="#disclaimers" className="underline text-fuchsia-800">Please Read Disclaimers</a></p>

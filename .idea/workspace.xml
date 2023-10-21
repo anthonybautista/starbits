@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="timeout for refresh?">
+    <list default="true" id="6951a5c0-37a3-4d12-b480-b8c791865a20" name="Changes" comment="add links">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Participate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Participate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,8 @@
       <workItem from="1696897215464" duration="38199000" />
       <workItem from="1697419567159" duration="1385000" />
       <workItem from="1697593960775" duration="5075000" />
-      <workItem from="1697676116655" duration="937000" />
+      <workItem from="1697676116655" duration="1012000" />
+      <workItem from="1697908458735" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="change to react">
       <created>1696628305700</created>
@@ -138,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697676077597</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add links">
+      <created>1697678377897</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697678377897</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +176,7 @@
     <MESSAGE value="redeploy" />
     <MESSAGE value="add Star Power info" />
     <MESSAGE value="timeout for refresh?" />
-    <option name="LAST_COMMIT_MESSAGE" value="timeout for refresh?" />
+    <MESSAGE value="add links" />
+    <option name="LAST_COMMIT_MESSAGE" value="add links" />
   </component>
 </project>
